@@ -8,7 +8,14 @@ export default function RootLayout({
   return (
     <div style={{ display: 'flex', overflow: 'hidden', height: '100vh' }}>
       <Sidebar />
-      <main style={{ flex: '1 1 auto', minWidth: '0', overflow: 'hidden' }}>
+      <main
+        style={{
+          flex: '1 1 auto',
+          minWidth: '0',
+          overflow: 'hidden',
+          padding: '10vh',
+        }}
+      >
         {children}
       </main>
     </div>

@@ -1,15 +1,10 @@
-import { useState } from 'react';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
-  const [price, setPrice] = useState<number>(0);
-
   return (
-    <div>
+    <div className={styles.container}>
       <div>
-        <span>Some Blog Post</span>
-      </div>
-      <div>
-        <span>{price}</span>
+        <span>Welcome to the blog</span>
       </div>
     </div>
   );

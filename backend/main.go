@@ -24,6 +24,13 @@ var posts = []BlogPost{
 
 func main() {
 	router := gin.Default()
+
+	// Enable CORS for all routes
+	router.Use(func(c *gin.Context) {
+		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
+		c.Next()
+	})
+
 	router.GET("/posts", getPosts)
 	router.GET("/posts/:id", getPostById)
 	router.POST("/posts", putPosts)
