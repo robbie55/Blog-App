@@ -5,23 +5,23 @@ export default function BlogPost({
   author,
   content,
   datePosted,
-  id,
-}: {
+}: // id,
+{
   title: string;
   author: string;
   content: string;
-  datePosted: Date;
+  datePosted: string;
   id: string;
 }) {
   return (
     <div className={styles.postContainer}>
-      <div>
-        <span>{title}</span>
-      </div>
-      <div>
-        <span>
-          Written by {author} on {datePosted.toString()}
-        </span>
+      <div className={styles.postTopbar}>
+        <div>
+          <span>{title}</span>
+          <span>
+            Written by {author} on {datePosted}
+          </span>
+        </div>
       </div>
       <div>{content}</div>
     </div>
