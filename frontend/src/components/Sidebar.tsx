@@ -10,7 +10,7 @@ export default function Sidebar() {
 
   useEffect(() => {
     setSelectedPath(router.pathname);
-  }, [router.pathname]);
+  }, []);
 
   return (
     <nav className={styles.sidebar}>
